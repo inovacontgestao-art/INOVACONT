@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { MessageSquare, X, Send } from 'lucide-react';
-import { AUREA_IMAGE_URL } from '../constants';
+import { AUREA_IMAGE_URL } from '../constants.tsx';
 
 const AureaChat: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -38,7 +38,7 @@ const AureaChat: React.FC = () => {
                 <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
               </div>
               <p className="text-gray-600 font-bold text-sm leading-relaxed">
-                Olá! Sou a sua assistente virtual. Vamos destravar o crescimento da sua empresa?
+                Olá! Sou a assistente virtual da Inovacont. Vamos destravar o crescimento da sua empresa?
               </p>
             </div>
           </div>

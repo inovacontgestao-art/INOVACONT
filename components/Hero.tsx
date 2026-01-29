@@ -1,15 +1,13 @@
 
 import React from 'react';
 import { ArrowRight, CheckCircle2, Activity } from 'lucide-react';
-import { AUREA_IMAGE_URL } from '../constants';
+import { AUREA_IMAGE_URL } from '../constants.tsx';
 
 const Hero: React.FC = () => {
   return (
     <section className="relative min-h-[95vh] flex items-center pt-32 pb-20 overflow-hidden">
-      {/* Dynamic Background */}
       <div className="absolute top-0 right-0 w-full lg:w-[55%] h-full bg-[#1A0044] -z-10 clip-path-hero">
         <div className="absolute inset-0 brand-pattern opacity-20"></div>
-        {/* Glow behind Áurea */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-violet-500/30 blur-[120px] rounded-full"></div>
       </div>
       
@@ -48,7 +46,6 @@ const Hero: React.FC = () => {
                 </a>
               </div>
 
-              {/* Elemento de Ancoragem (Pilares) */}
               <div className="flex flex-wrap gap-x-6 gap-y-3 pt-2">
                 {[
                   "Contabilidade Estratégica",
@@ -73,15 +70,13 @@ const Hero: React.FC = () => {
           
           <div className="lg:w-1/2 relative">
             <div className="relative group">
-              {/* Photo Frame */}
               <div className="relative z-10 w-full aspect-[4/5] max-w-[550px] mx-auto overflow-hidden rounded-[60px] border-[12px] border-white shadow-2xl transition-all duration-1000 group-hover:shadow-violet-500/20">
                 <img 
                   src={AUREA_IMAGE_URL} 
-                  alt="Áurea - Inovacont Virtual Specialist" 
+                  alt="Áurea" 
                   className="w-full h-full object-cover object-top scale-105 group-hover:scale-110 transition-transform duration-[2s]"
                 />
                 
-                {/* Overlay Name Tag */}
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#1A0044] via-[#1A0044]/40 to-transparent p-12 text-white">
                   <div className="flex items-center gap-3 mb-2">
                     <div className="w-8 h-[2px] bg-violet-400"></div>
@@ -92,7 +87,6 @@ const Hero: React.FC = () => {
                 </div>
               </div>
 
-              {/* Status Floating Card */}
               <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-[32px] shadow-2xl z-20 border border-violet-50 animate-bounce-slow">
                 <div className="flex items-center gap-5">
                    <div className="relative">

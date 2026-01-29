@@ -19,7 +19,6 @@
       .text-purple-brand { color: #3B0764; }
       .bg-purple-light { background-color: #F5F3FF; }
       
-      /* Brand Pattern Generator */
       .brand-pattern {
         background-color: #3B0764;
         background-image: url("data:image/svg+xml,%3Csvg width='60' height='80' viewBox='0 0 60 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 5C22 5 18 12 18 20C18 28 25 33 30 40C37 40 42 33 42 25C42 17 37 5 30 5ZM30 75C37 75 42 68 42 60C42 52 35 47 30 40C23 40 18 47 18 55C18 63 23 75 30 75Z' fill='%23ffffff' fill-opacity='0.08'/%3E%3C/svg%3E");
@@ -39,7 +38,6 @@
         animation: fadeIn 0.8s ease-out forwards;
       }
 
-      /* Scroll Reveal Classes */
       .reveal {
         opacity: 0;
         transform: translateY(30px);
@@ -51,18 +49,21 @@
         transform: translateY(0);
       }
     </style>
-  <script type="importmap">
+    <script type="importmap">
 {
   "imports": {
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "react/": "https://esm.sh/react@^19.2.3/",
-    "react": "https://esm.sh/react@^19.2.3",
-    "lucide-react": "https://esm.sh/lucide-react@^0.563.0"
+    "react": "https://esm.sh/react@19.0.0",
+    "react-dom": "https://esm.sh/react-dom@19.0.0",
+    "react-dom/client": "https://esm.sh/react-dom@19.0.0/client",
+    "lucide-react": "https://esm.sh/lucide-react@0.463.0",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/"
   }
 }
 </script>
-</head>
+  </head>
   <body class="bg-white text-gray-900">
     <div id="root"></div>
+    <script type="module" src="index.tsx"></script>
   </body>
 </html>

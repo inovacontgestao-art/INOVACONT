@@ -1,7 +1,7 @@
 
 import React from 'react';
-import { PARTNERS } from '../constants';
-import ScrollReveal from './ScrollReveal';
+import { PARTNERS } from '../constants.tsx';
+import ScrollReveal from './ScrollReveal.tsx';
 import { ArrowUpRight } from 'lucide-react';
 
 const Partners: React.FC = () => {
@@ -24,7 +24,6 @@ const Partners: React.FC = () => {
           {PARTNERS.map((partner, index) => (
             <ScrollReveal key={index} delay={index * 150} className="h-full">
               <div className="group relative bg-white p-8 rounded-[32px] border border-violet-100 shadow-xl hover:shadow-2xl transition-all duration-500 flex flex-col h-full overflow-hidden">
-                {/* Visual Accent */}
                 <div className="absolute top-0 right-0 w-24 h-24 bg-violet-50 rounded-bl-full -z-0 opacity-50 group-hover:bg-violet-600 group-hover:opacity-10 transition-all duration-500"></div>
                 
                 <div className="relative z-10 flex flex-col h-full">

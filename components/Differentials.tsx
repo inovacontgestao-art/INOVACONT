@@ -1,7 +1,7 @@
 
 import React from 'react';
-import { DIFFERENTIALS } from '../constants';
-import ScrollReveal from './ScrollReveal';
+import { DIFFERENTIALS } from '../constants.tsx';
+import ScrollReveal from './ScrollReveal.tsx';
 
 const Differentials: React.FC = () => {
   return (
@@ -25,7 +25,6 @@ const Differentials: React.FC = () => {
               <div 
                 className="p-10 bg-[#1A0044]/95 backdrop-blur-md rounded-[32px] border border-white/10 shadow-2xl transition-all group hover:-translate-y-2 relative overflow-hidden h-full"
               >
-                {/* Efeito visual de brilho no hover */}
                 <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-bl-full -z-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 
                 <div className="mb-8 relative z-10 inline-block p-5 bg-white/10 rounded-2xl text-white group-hover:bg-violet-600 group-hover:scale-110 transition-all duration-500 shadow-inner border border-white/5">

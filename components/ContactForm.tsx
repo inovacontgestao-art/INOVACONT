@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { Send, CheckCircle2, Sparkles } from 'lucide-react';
-import ScrollReveal from './ScrollReveal';
+import ScrollReveal from './ScrollReveal.tsx';
 
 const ContactForm: React.FC = () => {
   const [submitted, setSubmitted] = useState(false);
@@ -10,7 +10,6 @@ const ContactForm: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    // Simulate API call
     setTimeout(() => {
       setLoading(false);
       setSubmitted(true);
@@ -24,9 +23,9 @@ const ContactForm: React.FC = () => {
           <div className="mb-6 inline-block p-4 bg-green-100 text-green-600 rounded-full">
             <CheckCircle2 className="w-12 h-12" />
           </div>
-          <h2 className="text-3xl font-bold text-[#1A0044] mb-4">Áurea recebeu seus dados!</h2>
+          <h2 className="text-3xl font-bold text-[#1A0044] mb-4">Inovacont recebeu seus dados!</h2>
           <p className="text-gray-600 mb-8 font-medium">
-            Obrigado! Nossa equipe (e a Áurea) já estão analisando sua solicitação. Em breve entraremos em contato.
+            Obrigado! Nossa equipe já está analisando sua solicitação. Em breve entraremos em contato.
           </p>
           <button 
             onClick={() => setSubmitted(false)}
@@ -52,7 +51,7 @@ const ContactForm: React.FC = () => {
                 </div>
                 <h2 className="text-3xl font-black mb-6 leading-tight">Agilize seu diagnóstico.</h2>
                 <p className="text-violet-200 text-lg mb-10 leading-relaxed font-medium">
-                  Deixe seus dados para que a Áurea organize suas informações e nossos consultores falem diretamente sobre o que você precisa.
+                  Deixe seus dados para que nossa equipe organize suas informações e nossos consultores falem diretamente sobre o que você precisa.
                 </p>
                 <div className="space-y-6">
                   {[
@@ -76,40 +75,20 @@ const ContactForm: React.FC = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <label className="text-xs font-black uppercase tracking-widest text-[#1A0044]">Nome completo</label>
-                    <input 
-                      required 
-                      type="text" 
-                      placeholder="João Silva" 
-                      className="w-full px-5 py-4 bg-purple-light/50 border-2 border-transparent rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#1A0044] focus:bg-white transition-all font-medium"
-                    />
+                    <input required type="text" placeholder="João Silva" className="w-full px-5 py-4 bg-purple-light/50 border-2 border-transparent rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#1A0044] focus:bg-white transition-all font-medium" />
                   </div>
                   <div className="space-y-2">
                     <label className="text-xs font-black uppercase tracking-widest text-[#1A0044]">WhatsApp</label>
-                    <input 
-                      required 
-                      type="tel" 
-                      placeholder="(00) 00000-0000" 
-                      className="w-full px-5 py-4 bg-purple-light/50 border-2 border-transparent rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#1A0044] focus:bg-white transition-all font-medium"
-                    />
+                    <input required type="tel" placeholder="(00) 00000-0000" className="w-full px-5 py-4 bg-purple-light/50 border-2 border-transparent rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#1A0044] focus:bg-white transition-all font-medium" />
                   </div>
                 </div>
-                
                 <div className="space-y-2">
                   <label className="text-xs font-black uppercase tracking-widest text-[#1A0044]">E-mail Corporativo</label>
-                  <input 
-                    required 
-                    type="email" 
-                    placeholder="seu@empresa.com" 
-                    className="w-full px-5 py-4 bg-purple-light/50 border-2 border-transparent rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#1A0044] focus:bg-white transition-all font-medium"
-                  />
+                  <input required type="email" placeholder="seu@empresa.com" className="w-full px-5 py-4 bg-purple-light/50 border-2 border-transparent rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#1A0044] focus:bg-white transition-all font-medium" />
                 </div>
-                
                 <div className="space-y-2">
                   <label className="text-xs font-black uppercase tracking-widest text-[#1A0044]">Serviço Desejado</label>
-                  <select 
-                    id="servico-select"
-                    className="w-full px-5 py-4 bg-purple-light/50 border-2 border-transparent rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#1A0044] focus:bg-white transition-all font-medium cursor-pointer"
-                  >
+                  <select id="servico-select" className="w-full px-5 py-4 bg-purple-light/50 border-2 border-transparent rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#1A0044] focus:bg-white transition-all font-medium cursor-pointer">
                     <option value="">O que você busca hoje?</option>
                     <option value="bpo-financeiro">BPO Financeiro (Terceirização)</option>
                     <option value="irpf">Imposto de Renda (IRPF)</option>
@@ -119,22 +98,12 @@ const ContactForm: React.FC = () => {
                     <option value="abertura">Abertura de Empresa</option>
                   </select>
                 </div>
-                
                 <div className="space-y-2">
                   <label className="text-xs font-black uppercase tracking-widest text-[#1A0044]">Mensagem (Opcional)</label>
-                  <textarea 
-                    rows={3} 
-                    placeholder="Conte-nos um pouco sobre seu desafio atual..." 
-                    className="w-full px-5 py-4 bg-purple-light/50 border-2 border-transparent rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#1A0044] focus:bg-white transition-all resize-none font-medium"
-                  ></textarea>
+                  <textarea rows={3} placeholder="Conte-nos um pouco sobre seu desafio atual..." className="w-full px-5 py-4 bg-purple-light/50 border-2 border-transparent rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#1A0044] focus:bg-white transition-all resize-none font-medium"></textarea>
                 </div>
-                
-                <button 
-                  type="submit" 
-                  disabled={loading}
-                  className="w-full flex items-center justify-center gap-3 py-5 bg-[#1A0044] text-white rounded-2xl font-black text-lg hover:bg-violet-900 transition-all disabled:opacity-70 shadow-xl shadow-violet-100 transform hover:-translate-y-1"
-                >
-                  {loading ? 'Sincronizando...' : 'Enviar para Áurea'} <Send className="w-5 h-5" />
+                <button type="submit" disabled={loading} className="w-full flex items-center justify-center gap-3 py-5 bg-[#1A0044] text-white rounded-2xl font-black text-lg hover:bg-violet-900 transition-all disabled:opacity-70 shadow-xl shadow-violet-100 transform hover:-translate-y-1">
+                  {loading ? 'Sincronizando...' : 'Enviar Mensagem'} <Send className="w-5 h-5" />
                 </button>
               </form>
             </div>

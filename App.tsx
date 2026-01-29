@@ -1,15 +1,15 @@
 
 import React from 'react';
-import Header from './components/Header';
-import Hero from './components/Hero';
-import Differentials from './components/Differentials';
-import Services from './components/Services';
-import ContactForm from './components/ContactForm';
-import Partners from './components/Partners';
-import Footer from './components/Footer';
-import AureaChat from './components/AureaChat';
-import ScrollReveal from './components/ScrollReveal';
-import { AUREA_IMAGE_URL } from './constants';
+import Header from './components/Header.tsx';
+import Hero from './components/Hero.tsx';
+import Differentials from './components/Differentials.tsx';
+import Services from './components/Services.tsx';
+import ContactForm from './components/ContactForm.tsx';
+import Partners from './components/Partners.tsx';
+import Footer from './components/Footer.tsx';
+import AureaChat from './components/AureaChat.tsx';
+import ScrollReveal from './components/ScrollReveal.tsx';
+import { AUREA_IMAGE_URL } from './constants.tsx';
 
 const App: React.FC = () => {
   return (
@@ -24,7 +24,6 @@ const App: React.FC = () => {
         
         <Services />
         
-        {/* Intro Áurea Section */}
         <section className="py-24 bg-[#1A0044] text-white relative overflow-hidden">
           <div className="absolute inset-0 brand-pattern opacity-10"></div>
           <div className="container mx-auto px-6 relative z-10">
@@ -77,8 +76,6 @@ const App: React.FC = () => {
         <Partners />
       </main>
       <Footer />
-      
-      {/* Smart Virtual Assistant Widget */}
       <AureaChat />
     </div>
   );

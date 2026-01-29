@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Instagram, Linkedin, Mail, MapPin, Phone } from 'lucide-react';
-import { BrandLogo } from './BrandLogo';
+import { BrandLogo } from './BrandLogo.tsx';
 
 const Footer: React.FC = () => {
   return (
@@ -12,10 +12,7 @@ const Footer: React.FC = () => {
             <h2 className="text-4xl font-black mb-4">Pronto para o próximo nível?</h2>
             <p className="text-violet-200 text-xl font-medium">Organização, compliance e estratégia para o seu crescimento.</p>
           </div>
-          <a 
-            href="#contato" 
-            className="bg-white text-[#1A0044] px-12 py-6 rounded-2xl font-black text-xl hover:bg-violet-50 transition-all transform hover:scale-105 shadow-2xl hover:shadow-white/20 whitespace-nowrap"
-          >
+          <a href="#contato" className="bg-white text-[#1A0044] px-12 py-6 rounded-2xl font-black text-xl hover:bg-violet-50 transition-all transform hover:scale-105 shadow-2xl hover:shadow-white/20 whitespace-nowrap">
             👉 Falar com a Inovacont
           </a>
         </div>
@@ -77,10 +74,6 @@ const Footer: React.FC = () => {
         
         <div className="pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6 text-violet-400/60 text-xs font-bold uppercase tracking-widest">
           <p>© {new Date().getFullYear()} Inovacont. Gestão e Estratégia.</p>
-          <div className="flex gap-8">
-            <a href="#" className="hover:text-white transition-colors">Políticas de Privacidade</a>
-            <a href="#" className="hover:text-white transition-colors">Termos de Uso</a>
-          </div>
         </div>
       </div>
     </footer>

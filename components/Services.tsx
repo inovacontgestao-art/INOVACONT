@@ -1,8 +1,8 @@
 
 import React from 'react';
-import { SERVICES } from '../constants';
+import { SERVICES } from '../constants.tsx';
 import { ChevronRight } from 'lucide-react';
-import ScrollReveal from './ScrollReveal';
+import ScrollReveal from './ScrollReveal.tsx';
 
 const Services: React.FC = () => {
   return (

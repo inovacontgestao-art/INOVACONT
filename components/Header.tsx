@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { BrandLogo } from './BrandLogo';
+import { BrandLogo } from './BrandLogo.tsx';
 
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
