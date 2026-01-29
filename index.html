@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inovacont — Contabilidade Inteligente</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        scroll-behavior: smooth;
+        background-color: #FFFFFF;
+      }
+      .bg-purple-brand { background-color: #3B0764; }
+      .text-purple-brand { color: #3B0764; }
+      .bg-purple-light { background-color: #F5F3FF; }
+      
+      /* Brand Pattern Generator */
+      .brand-pattern {
+        background-color: #3B0764;
+        background-image: url("data:image/svg+xml,%3Csvg width='60' height='80' viewBox='0 0 60 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 5C22 5 18 12 18 20C18 28 25 33 30 40C37 40 42 33 42 25C42 17 37 5 30 5ZM30 75C37 75 42 68 42 60C42 52 35 47 30 40C23 40 18 47 18 55C18 63 23 75 30 75Z' fill='%23ffffff' fill-opacity='0.08'/%3E%3C/svg%3E");
+        background-size: 80px 100px;
+      }
+
+      .brand-pattern-light {
+        background-image: url("data:image/svg+xml,%3Csvg width='60' height='80' viewBox='0 0 60 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 5C22 5 18 12 18 20C18 28 25 33 30 40C37 40 42 33 42 25C42 17 37 5 30 5ZM30 75C37 75 42 68 42 60C42 52 35 47 30 40C23 40 18 47 18 55C18 63 23 75 30 75Z' fill='%233B0764' fill-opacity='0.03'/%3E%3C/svg%3E");
+        background-size: 120px 150px;
+      }
+
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .animate-fadeIn {
+        animation: fadeIn 0.8s ease-out forwards;
+      }
+
+      /* Scroll Reveal Classes */
+      .reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1), transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+        will-change: opacity, transform;
+      }
+      .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-white text-gray-900">
+    <div id="root"></div>
+  </body>
+</html>
