@@ -1,50 +1,68 @@
 
 import React from 'react';
 import { SERVICES } from '../constants.tsx';
-import { ChevronRight } from 'lucide-react';
+import { ArrowUpRight, Hexagon } from 'lucide-react';
 import ScrollReveal from './ScrollReveal.tsx';
 
 const Services: React.FC = () => {
   return (
-    <section id="servicos" className="py-20 bg-purple-light/30">
+    <section id="servicos" className="py-32 relative">
       <div className="container mx-auto px-6">
         <ScrollReveal>
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#2E1065] mb-4">
-              Soluções da Inovacont
-            </h2>
-            <p className="text-gray-600 text-lg">
-              Atendimento especializado para transformar sua gestão financeira e tributária.
-            </p>
+          <div className="mb-24 flex flex-col md:flex-row items-baseline gap-6">
+            <h2 className="text-7xl md:text-9xl font-black text-white tracking-tighter opacity-10 select-none uppercase">Sistemas</h2>
+            <div className="md:-ml-32 relative z-10">
+              <h3 className="text-5xl md:text-6xl font-black text-white tracking-tighter mb-4">
+                Soluções <span className="text-violet-500">Integradas</span>.
+              </h3>
+              <p className="text-xl text-gray-400 font-medium max-w-xl leading-relaxed">
+                Nossas unidades de serviço operam de forma integrada, garantindo que cada bit de dado financeiro impulsione sua estratégia.
+              </p>
+            </div>
           </div>
         </ScrollReveal>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {SERVICES.map((service, index) => (
-            <ScrollReveal key={service.id} delay={index * 100} className="h-full">
-              <div 
-                className="bg-white p-8 rounded-3xl shadow-sm border border-purple-light hover:shadow-2xl transition-all flex flex-col h-full"
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
+          {SERVICES.map((service, index) => {
+            // Criando variação de tamanho para o bento grid
+            const isLarge = index === 0 || index === 3;
+            return (
+              <ScrollReveal 
+                key={service.id} 
+                delay={index * 100} 
+                className={isLarge ? "md:col-span-8" : "md:col-span-4"}
               >
-                <div className="w-12 h-12 bg-purple-light rounded-2xl flex items-center justify-center text-[#2E1065] mb-6">
-                  {service.icon}
+                <div className="glass-card p-10 rounded-[40px] group flex flex-col h-full relative overflow-hidden bento-item">
+                  <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-30 transition-opacity">
+                    <Hexagon className="w-24 h-24 text-white" strokeWidth={0.5} />
+                  </div>
+
+                  <div className="w-16 h-16 bg-white/5 rounded-2xl flex items-center justify-center text-violet-400 mb-10 border border-white/10 group-hover:bg-violet-600 group-hover:text-white transition-all duration-700">
+                    {service.icon}
+                  </div>
+                  
+                  <div className="flex-grow">
+                    <h4 className="text-3xl font-black text-white mb-6 tracking-tight group-hover:text-violet-400 transition-colors">
+                      {service.title}
+                    </h4>
+                    <p className={`text-gray-400 font-medium leading-relaxed mb-10 ${isLarge ? 'max-w-xl' : ''}`}>
+                      {service.description}
+                    </p>
+                  </div>
+                  
+                  <div className="flex items-center justify-between pt-8 border-t border-white/5">
+                    <span className="text-[10px] font-black uppercase tracking-[0.3em] text-gray-500">Núcleo de Serviço v2.0</span>
+                    <a 
+                      href="#contato"
+                      className="w-12 h-12 rounded-full glass-card border-white/10 flex items-center justify-center text-white hover:bg-violet-600 hover:scale-110 transition-all"
+                    >
+                      <ArrowUpRight className="w-5 h-5" />
+                    </a>
+                  </div>
                 </div>
-                <h3 className="text-xl font-bold text-[#2E1065] mb-4">{service.title}</h3>
-                <p className="text-gray-600 mb-8 flex-grow leading-relaxed">
-                  {service.description}
-                </p>
-                <a 
-                  href="#contato"
-                  onClick={() => {
-                    const select = document.getElementById('servico-select') as HTMLSelectElement;
-                    if (select) select.value = service.id;
-                  }}
-                  className="w-full flex items-center justify-center gap-2 py-3.5 bg-[#2E1065] text-white rounded-xl font-bold hover:bg-violet-800 transition-colors shadow-lg shadow-violet-100"
-                >
-                  {service.buttonText} <ChevronRight className="w-4 h-4" />
-                </a>
-              </div>
-            </ScrollReveal>
-          ))}
+              </ScrollReveal>
+            );
+          })}
         </div>
       </div>
     </section>

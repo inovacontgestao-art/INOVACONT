@@ -1,126 +1,76 @@
 
 import React from 'react';
-import { ArrowRight, CheckCircle2, Activity } from 'lucide-react';
-import { AUREA_IMAGE_URL } from '../constants.tsx';
+import { ArrowRight, Cpu, Layers } from 'lucide-react';
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative min-h-[95vh] flex items-center pt-32 pb-20 overflow-hidden">
-      <div className="absolute top-0 right-0 w-full lg:w-[55%] h-full bg-[#1A0044] -z-10 clip-path-hero">
-        <div className="absolute inset-0 brand-pattern opacity-20"></div>
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-violet-500/30 blur-[120px] rounded-full"></div>
+    <section className="relative min-h-screen flex items-center pt-20 pb-12 overflow-hidden">
+      {/* Elementos de Tecnologia ao Fundo */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-1/4 -left-20 w-[600px] h-[600px] bg-violet-600/10 blur-[150px] rounded-full"></div>
+        <div className="absolute bottom-1/4 -right-20 w-[500px] h-[500px] bg-cyan-600/10 blur-[150px] rounded-full"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-20"></div>
       </div>
-      
-      <div className="container mx-auto px-6">
-        <div className="flex flex-col lg:flex-row items-center gap-16">
-          <div className="lg:w-1/2 space-y-10 animate-fadeIn">
-            <div className="inline-flex items-center gap-3 py-2 px-5 bg-violet-50 text-[#1A0044] font-black text-xs uppercase tracking-[0.3em] rounded-full border border-violet-100 shadow-sm">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-violet-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-violet-600"></span>
-              </span>
-              Gestão Consultiva & Compliance
+
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col items-center text-center lg:items-start lg:text-left gap-10">
+            
+            <div className="inline-flex items-center gap-3 py-2 px-5 glass-card rounded-full border border-white/10 animate-fadeIn">
+              <span className="flex h-2 w-2 rounded-full bg-cyan-500 shadow-[0_0_10px_#06B6D4]"></span>
+              <span className="text-[10px] font-black uppercase tracking-[0.4em] text-cyan-400">O Novo Padrão da Contabilidade</span>
             </div>
             
-            <h1 className="text-5xl md:text-7xl font-black text-[#1A0044] leading-[1.05] tracking-tighter">
-              Contabilidade Estratégica e <span className="text-violet-600">Gestão Financeira</span> para Decisões Inteligentes.
+            <h1 className="text-6xl md:text-9xl font-[900] leading-[0.85] tracking-tighter text-neon-gradient">
+              NÃO É APENAS <br/> CONTABILIDADE. <br/> É <span className="italic">ENGENHARIA</span>.
             </h1>
             
-            <p className="text-xl text-gray-600 leading-relaxed font-medium max-w-xl">
-              Segurança, controle e crescimento para o seu negócio. Unimos contabilidade consultiva e <strong>BPO Financeiro</strong> à agilidade da <strong>Áurea</strong> para garantir conformidade e lucro real.
-            </p>
-            
-            <div className="space-y-8">
-              <div className="flex flex-col sm:flex-row gap-5">
-                <a 
-                  href="#contato" 
-                  className="inline-flex items-center justify-center gap-3 bg-[#1A0044] text-white px-10 py-5 rounded-2xl font-black text-lg hover:bg-[#2D054B] transition-all shadow-2xl hover:shadow-violet-200 transform hover:-translate-y-1"
-                >
-                  Falar com um Especialista <ArrowRight className="w-6 h-6" />
-                </a>
-                <a 
-                  href="#contato" 
-                  className="inline-flex items-center justify-center gap-3 bg-white border-2 border-[#1A0044] text-[#1A0044] px-10 py-5 rounded-2xl font-black text-lg hover:bg-violet-50 transition-all"
-                >
-                  Diagnóstico Estratégico
-                </a>
-              </div>
-
-              <div className="flex flex-wrap gap-x-6 gap-y-3 pt-2">
-                {[
-                  "Contabilidade Estratégica",
-                  "BPO Financeiro",
-                  "Planejamento Tributário",
-                  "Especialistas em Saúde"
-                ].map((pilar, idx) => (
-                  <div key={idx} className="flex items-center gap-2 text-[#1A0044] font-bold text-xs uppercase tracking-wider">
-                    <CheckCircle2 className="w-4 h-4 text-green-600" />
-                    {pilar}
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="flex items-center gap-8 pt-6 border-t border-gray-100">
-              <p className="text-sm font-bold text-gray-400 uppercase tracking-widest leading-tight">
-                Empresa líder em <br/><span className="text-[#1A0044]">BPO Financeiro e Contabilidade Consultiva</span>
-              </p>
-            </div>
-          </div>
-          
-          <div className="lg:w-1/2 relative">
-            <div className="relative group">
-              <div className="relative z-10 w-full aspect-[4/5] max-w-[550px] mx-auto overflow-hidden rounded-[60px] border-[12px] border-white shadow-2xl transition-all duration-1000 group-hover:shadow-violet-500/20">
-                <img 
-                  src={AUREA_IMAGE_URL} 
-                  alt="Áurea" 
-                  className="w-full h-full object-cover object-top scale-105 group-hover:scale-110 transition-transform duration-[2s]"
-                />
+            <div className="flex flex-col lg:flex-row items-center lg:items-end gap-12 w-full">
+              <div className="lg:w-1/2">
+                <p className="text-xl md:text-2xl text-gray-400 font-medium leading-relaxed max-w-xl">
+                  Eliminamos o arcaico. Injetamos inteligência. <br/> A <span className="text-white font-bold">Inovacont</span> é a plataforma de aceleração para empresas que ignoram limites.
+                </p>
                 
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#1A0044] via-[#1A0044]/40 to-transparent p-12 text-white">
-                  <div className="flex items-center gap-3 mb-2">
-                    <div className="w-8 h-[2px] bg-violet-400"></div>
-                    <span className="text-xs font-black uppercase tracking-[0.3em] text-violet-200">Diferencial Tecnológico</span>
-                  </div>
-                  <h2 className="text-6xl font-black tracking-tighter">Áurea</h2>
-                  <p className="text-violet-100/80 font-bold text-sm mt-1 uppercase tracking-widest italic">Suporte em Agilidade & Dados</p>
+                <div className="flex flex-wrap gap-4 pt-10 justify-center lg:justify-start">
+                  <a 
+                    href="#contato" 
+                    className="group relative flex items-center gap-4 bg-white text-black px-10 py-6 rounded-2xl font-black text-xl hover:bg-violet-500 hover:text-white transition-all duration-500 shadow-[0_0_30px_rgba(255,255,255,0.1)]"
+                  >
+                    ACIONAR MOTORES <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" />
+                  </a>
+                  <a 
+                    href="#servicos" 
+                    className="glass-card flex items-center gap-3 text-white px-10 py-6 rounded-2xl font-black text-xl hover:bg-white/10 transition-all"
+                  >
+                    ECOSSISTEMA
+                  </a>
                 </div>
               </div>
 
-              <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-[32px] shadow-2xl z-20 border border-violet-50 animate-bounce-slow">
-                <div className="flex items-center gap-5">
-                   <div className="relative">
-                      <div className="w-14 h-14 bg-violet-100 rounded-2xl flex items-center justify-center text-[#1A0044]">
-                        <Activity className="w-8 h-8" />
-                      </div>
-                      <div className="absolute -top-1 -right-1 w-4 h-4 bg-green-500 border-2 border-white rounded-full"></div>
-                   </div>
-                   <div>
-                      <p className="text-[#1A0044] font-black text-xl">Monitoramento</p>
-                      <p className="text-gray-400 font-bold text-xs uppercase tracking-tighter">Análise em Tempo Real</p>
-                   </div>
+              <div className="lg:w-1/2 flex justify-center lg:justify-end">
+                <div className="grid grid-cols-2 gap-4 w-full max-w-md">
+                  {[
+                    { label: 'Disponibilidade', val: '99.9%', icon: <Cpu className="w-4 h-4" /> },
+                    { label: 'Crescimento', val: '+42%', icon: <Layers className="w-4 h-4" /> }
+                  ].map((stat, i) => (
+                    <div key={i} className="glass-card p-6 rounded-3xl border-white/5">
+                      <div className="text-cyan-500 mb-2">{stat.icon}</div>
+                      <div className="text-3xl font-black text-white">{stat.val}</div>
+                      <div className="text-[10px] font-bold uppercase tracking-widest text-gray-500">{stat.label}</div>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      
-      <style>{`
-        .clip-path-hero {
-          clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%);
-        }
-        @media (max-width: 1024px) {
-          .clip-path-hero { display: none; }
-        }
-        @keyframes bounce-slow {
-          0%, 100% { transform: translateY(0); }
-          50% { transform: translateY(-15px); }
-        }
-        .animate-bounce-slow {
-          animation: bounce-slow 4s ease-in-out infinite;
-        }
-      `}</style>
+
+      {/* Indicador de Scroll */}
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 opacity-30">
+        <span className="text-[10px] font-black uppercase tracking-widest">Explorar</span>
+        <div className="w-[1px] h-12 bg-gradient-to-b from-white to-transparent"></div>
+      </div>
     </section>
   );
 };

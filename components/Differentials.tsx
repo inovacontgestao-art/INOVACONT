@@ -5,39 +5,40 @@ import ScrollReveal from './ScrollReveal.tsx';
 
 const Differentials: React.FC = () => {
   return (
-    <section id="diferenciais" className="py-24 bg-white brand-pattern-light">
+    <section id="diferenciais" className="py-32 relative overflow-hidden">
       <div className="container mx-auto px-6">
         <ScrollReveal>
-          <div className="text-center max-w-3xl mx-auto mb-20">
-            <div className="inline-block mb-4 py-1 px-3 bg-[#1A0044] text-white text-[10px] font-black uppercase tracking-widest rounded-md">
-              Excelência Operacional
+          <div className="text-center max-w-4xl mx-auto mb-24">
+            <div className="inline-block mb-6 py-1.5 px-4 bg-violet-600/10 text-violet-400 text-[9px] font-black uppercase tracking-[0.5em] rounded-md border border-violet-600/20">
+              DNA Tecnológico
             </div>
-            <h2 className="text-4xl md:text-5xl font-black text-[#1A0044] mb-6">
-              Por que escolher a Inovacont?
+            <h2 className="text-5xl md:text-8xl font-black text-white mb-8 tracking-tighter leading-none">
+              A INFRAESTRUTURA <br/> DO <span className="text-violet-500 italic">SUCESSO</span>.
             </h2>
-            <div className="h-2 w-20 bg-violet-600 mx-auto rounded-full"></div>
           </div>
         </ScrollReveal>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {DIFFERENTIALS.map((diff, index) => (
             <ScrollReveal key={index} delay={index * 100} className="h-full">
               <div 
-                className="p-10 bg-[#1A0044]/95 backdrop-blur-md rounded-[32px] border border-white/10 shadow-2xl transition-all group hover:-translate-y-2 relative overflow-hidden h-full"
+                className="p-12 glass-card rounded-[40px] border border-white/5 group hover:border-violet-500/50 transition-all duration-700 relative h-full flex flex-col"
               >
-                <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-bl-full -z-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                
-                <div className="mb-8 relative z-10 inline-block p-5 bg-white/10 rounded-2xl text-white group-hover:bg-violet-600 group-hover:scale-110 transition-all duration-500 shadow-inner border border-white/5">
-                  {React.cloneElement(diff.icon as React.ReactElement<any>, { className: "w-8 h-8 transition-colors" })}
+                <div className="mb-10 text-violet-400 group-hover:scale-110 group-hover:text-white transition-all duration-500">
+                  {React.cloneElement(diff.icon as React.ReactElement<any>, { className: "w-10 h-10", strokeWidth: 1.5 })}
                 </div>
                 
-                <h3 className="text-2xl font-black text-white mb-5 relative z-10 leading-tight">
+                <h3 className="text-2xl font-black text-white mb-6 leading-tight tracking-tight">
                   {diff.title}
                 </h3>
                 
-                <p className="text-violet-100/70 font-medium leading-relaxed relative z-10">
+                <p className="text-gray-500 font-medium leading-relaxed group-hover:text-gray-300 transition-colors">
                   {diff.description}
                 </p>
+
+                <div className="mt-10 pt-6 border-t border-white/5 opacity-0 group-hover:opacity-100 transition-opacity">
+                  <span className="text-[10px] font-black uppercase tracking-widest text-violet-500">Recurso Core #0{index + 1}</span>
+                </div>
               </div>
             </ScrollReveal>
           ))}
